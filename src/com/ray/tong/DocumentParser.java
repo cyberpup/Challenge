@@ -12,8 +12,16 @@ import java.util.Map;
  * Any sequence of chars beginning with either an upper or lower case letter
  * (i.e. the set {a - z, A-Z} followed immediately by a space or a letter
  * 
- * Edge cases: Contractions are not counted (i.e. in the sentence 'I'm having fun.' 
+ * 
+ * Edge cases: 
+ * 
+ * (1) Contractions are not counted (i.e. in the sentence 'I'm having fun.' 
  * only 'I', 'having', 'fun' will be counted)
+ * 
+ * (2) Words that differ only by whether it's capitalized or not are considered
+ * two separate words.
+ * 
+ * 
  * 
  * Time Complexity: N time 
  * 
@@ -66,7 +74,7 @@ public class DocumentParser {
 					}
 					// Save current word
 					saveWord(word.toString());
-					System.out.println(word);
+					//System.out.println(word);
 					
 					// clear String buffer to start a new word
 					word.delete(0,  word.length());

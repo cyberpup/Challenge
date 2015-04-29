@@ -1,6 +1,7 @@
 package com.ray.tong;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Barebone BST
@@ -15,7 +16,11 @@ import java.util.ArrayList;
 public class RayTongBST{
 	
 	private Node root;
+	private List<String> reverseInOrderList;
 	
+	public RayTongBST(){
+		reverseInOrderList = new ArrayList();
+	}
 	
 	public int countNodes(){
 			return countNodes(root);
@@ -60,6 +65,10 @@ public class RayTongBST{
 		
 	}
 	
+	public List<String> getReverseInOrderList(){
+		return reverseInOrderList;
+	}
+	
 	public void reverseInOrder(){
 		
 		reverseInOrder(root);
@@ -71,7 +80,8 @@ public class RayTongBST{
 		if (node != null){
 			
 			reverseInOrder(node.getRightChild());
-			System.out.println(node.getWord());
+			//System.out.println(node.getWord());
+			reverseInOrderList.add(node.getWord());			
 			reverseInOrder(node.getLeftChild());
 			
 		}
