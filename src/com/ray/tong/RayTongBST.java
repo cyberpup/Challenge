@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Barebone BST
  * 
- * Functions: insert, countNodes, reverseInOrder
+ * Main Functions: insert, countNodes, reverseInOrder
  * 
  * @author Raymond Tong
  * Date: April 29th, 2015

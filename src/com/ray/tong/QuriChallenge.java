@@ -6,6 +6,22 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * 
+ * Given:
+ * (1) a String representing the contents of a text document
+ * (2) an integer providing the number of items to return
+ * 
+ * Returns: 
+ * a list of Strings ordered by word frequency, 
+ * the most frequently occurring word first. 
+ * 
+ * 
+ * @author Raymond Tong
+ * Date: April 29th, 2015
+ *
+ */
+
 public class QuriChallenge {
 	
 	DocumentParser parser;
@@ -19,6 +35,13 @@ public class QuriChallenge {
 		bst = new RayTongBST();
 		results = new ArrayList<String>();
 	}
+	/**
+	 * 
+	 * @param text
+	 * @param numOfItems
+	 * @return a list of Strings ordered by word frequency, 
+	 * 			the most frequently occurring word first.
+	 */
 	
 	public List<String> quriThis(String text, int numOfItems){
 		
